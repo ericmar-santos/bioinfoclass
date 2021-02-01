@@ -375,7 +375,7 @@ for r1 in `find ${outdir}/ -name '*.prinseq.cleaned_1.fastq'`; do
 			
 				STAR 	--runThreadN ${THREADS} \
 					--genomeDir ${outdir}/star_index/ \
-					--readFilesIn ${r1} \
+					--readFilesIn ${outdir}/star_out_se/${name}/singletons.fastq \
 					--outSAMstrandField intronMotif \
 					--outFilterIntronMotifs RemoveNoncanonical \
 					--sjdbGTFfile ${refgtf} \
